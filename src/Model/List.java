@@ -23,8 +23,13 @@ public class List<T> {
     }
 
     public T valueOf(int index) {
-        Node<T> target = getElement(index);
-        return target.getValue();
+        if(index >= 0 && index < length) {
+            Node<T> target = getElement(index);
+            return target.getValue();
+        }
+        else {
+            return null;
+        }
     }
 
     public int indexOf(T target) {
@@ -52,20 +57,69 @@ public class List<T> {
         length++;
     }
 
-    public void insert(T newValue, int index) {
-        Node<T> actual = getElement(index);
-        Node<T> prev = getElement(index - 1);
-        Node<T> newNode = new Node<T>(newValue);
-        prev.setNext(newNode);
-        newNode.setNext(actual);
+    public void unshift(T newValue) {
+        if(head == null) {
+            head = new Node<T>(newValue);
+            end = head;
+        }
+        else {
+            Node<T> temp = head;
+            head = new Node<T>(newValue);
+            head.setNext(temp);
+        }
         length++;
+    }
+
+    public void insert(T newValue, int index) {
+        if(index >= 0 && index <= length) {
+            if(index == 0) {
+                unshift(newValue);
+            }
+            else if(index == length) {
+                push(newValue);
+            }
+            else {
+                Node<T> actual = getElement(index);
+                Node<T> prev = getElement(index - 1);
+                Node<T> newNode = new Node<T>(newValue);
+                prev.setNext(newNode);
+                newNode.setNext(actual);
+                length++;
+            }
+        }
     }
 
     public T pop() {
         if(head != null) {
             T value = end.getValue();
-            Node<T> end = getElement(length - 2);
-            end.setNext(null);
+            if(head == end) {
+                head = null;
+                end = null;
+            }
+            else {
+                Node<T> newEnd = getElement(length - 2);
+                newEnd.setNext(null);
+                end = newEnd;
+            }
+            System.gc();
+            length--;
+            return value;
+        }
+        return null;
+    }
+
+    public T shift() {
+        if(head != null) {
+            T value = head.getValue();
+            if(head == end) {
+                head = null;
+                end = null;
+            }
+            else {
+                Node<T> newHead = head.getNext();
+                head.setNext(null);
+                head = newHead;
+            }
             System.gc();
             length--;
             return value;
@@ -74,11 +128,21 @@ public class List<T> {
     }
 
     public void del(int index) {
-        Node<T> actual = getElement(index);
-        Node<T> prev = getElement(index - 1);
-        prev.setNext(actual.getNext());
-        System.gc();
-        length--;
+        if(index >= 0 && index < length) {
+            if(index == 0) {
+                shift();
+            }
+            else if(index == length - 1) {
+                pop();
+            }
+            else {
+                Node<T> actual = getElement(index);
+                Node<T> prev = getElement(index - 1);
+                prev.setNext(actual.getNext());
+            }
+            System.gc();
+            length--;
+        }
     }
 
     public void showList() {
