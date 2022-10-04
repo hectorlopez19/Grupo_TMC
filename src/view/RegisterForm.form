@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="view.RegisterForm">
+  <grid id="27dc6" binding="bgPanel" layout-manager="GridLayoutManager" row-count="7" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="0" vgap="5">
+    <margin top="10" left="25" bottom="10" right="25"/>
+    <constraints>
+      <xy x="20" y="20" width="854" height="777"/>
+    </constraints>
+    <properties>
+      <background color="-14539723"/>
+      <preferredSize width="1000" height="600"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <grid id="ce05a" binding="buttonsPanel" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="5" bottom="0" right="5"/>
+        <constraints>
+          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-14539723"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="d1b6b" class="javax.swing.JButton" binding="saveButton">
+            <constraints>
+              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="313" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <text value="Guardar cotizacion"/>
+            </properties>
+          </component>
+          <component id="e0523" class="javax.swing.JButton" binding="backButton" default-binding="true">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="313" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <text value="Regresar"/>
+            </properties>
+          </component>
+          <component id="a90e5" class="javax.swing.JButton" binding="cleanButton" default-binding="true">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="313" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <text value="Limpiar"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="465a2" binding="roomPanel" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="0">
+        <margin top="0" left="10" bottom="0" right="10"/>
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-14539723"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <grid id="5b9b9" binding="roomInputPanel" layout-manager="GridLayoutManager" row-count="2" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="10">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-14539723"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="55fdc" class="javax.swing.JLabel" binding="roomLabel">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="2" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font size="16"/>
+                  <foreground color="-1776412"/>
+                  <text value="Tipo de habitación"/>
+                </properties>
+              </component>
+              <component id="20fe8" class="javax.swing.JLabel" binding="roomImageLabel">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <icon value="view/img/logo-club.png"/>
+                  <text value=""/>
+                </properties>
+              </component>
+              <grid id="8ac34" binding="roomSelectionPanel" layout-manager="GridLayoutManager" row-count="2" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="50" left="0" bottom="50" right="0"/>
+                <constraints>
+                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <preferred-size width="630" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <opaque value="false"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="7e58f" class="javax.swing.JRadioButton" binding="regularRoomRadio">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                        <preferred-size width="210" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <borderPainted value="false"/>
+                      <foreground color="-1776412"/>
+                      <horizontalAlignment value="0"/>
+                      <text value="Sencilla"/>
+                    </properties>
+                  </component>
+                  <component id="3e130" class="javax.swing.JRadioButton" binding="doubleRoomRadio">
+                    <constraints>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                        <preferred-size width="210" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <foreground color="-1776412"/>
+                      <horizontalAlignment value="0"/>
+                      <text value="Doble"/>
+                    </properties>
+                  </component>
+                  <component id="3cf76" class="javax.swing.JRadioButton" binding="suiteRoomRadio">
+                    <constraints>
+                      <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                        <preferred-size width="210" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <foreground color="-1776412"/>
+                      <horizontalAlignment value="0"/>
+                      <text value="Suite"/>
+                    </properties>
+                  </component>
+                  <component id="239ca" class="javax.swing.JLabel" binding="regularRoomPriceLabel">
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <foreground color="-6645094"/>
+                      <text value="$ 1 200 / dia"/>
+                    </properties>
+                  </component>
+                  <component id="cccf4" class="javax.swing.JLabel" binding="doubleRoomPriceLabel">
+                    <constraints>
+                      <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <foreground color="-6645094"/>
+                      <text value="$ 2 100 / dia"/>
+                    </properties>
+                  </component>
+                  <component id="6d5d7" class="javax.swing.JLabel" binding="suiteRoomPriceLabel">
+                    <constraints>
+                      <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <foreground color="-6645094"/>
+                      <text value="$ 3 500 / dia"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+            </children>
+          </grid>
+          <grid id="d82f5" binding="roomAlertPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <minimum-size width="-1" height="12"/>
+                <preferred-size width="-1" height="12"/>
+                <maximum-size width="-1" height="12"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-14539723"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="7f5d8" class="javax.swing.JLabel" binding="roomAlertLabel">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="2" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font size="10"/>
+                  <foreground color="-39587"/>
+                  <horizontalAlignment value="0"/>
+                  <horizontalTextPosition value="0"/>
+                  <text value="Seleccione una habitacion"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+        </children>
+      </grid>
+      <grid id="d2248" binding="destinationPanel" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="0">
+        <margin top="0" left="10" bottom="0" right="10"/>
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-14539723"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <grid id="e600e" binding="destinationAlertPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <minimum-size width="-1" height="12"/>
+                <preferred-size width="-1" height="12"/>
+                <maximum-size width="-1" height="12"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-14539723"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="70e2a" class="javax.swing.JLabel" binding="destinationAlertLabel">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="2" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font size="10"/>
+                  <foreground color="-39587"/>
+                  <horizontalAlignment value="0"/>
+                  <horizontalTextPosition value="0"/>
+                  <text value="Seleccione un destino"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="c395c" binding="destinationInputPanel" layout-manager="GridLayoutManager" row-count="3" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="10">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-14539723"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="6abf1" class="javax.swing.JLabel" binding="destinationLabel">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="5" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="2" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font size="16"/>
+                  <foreground color="-1"/>
+                  <text value="Destino"/>
+                </properties>
+              </component>
+              <component id="ff12d" class="javax.swing.JRadioButton" binding="playaRadio">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="186" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <foreground color="-1776412"/>
+                  <horizontalAlignment value="0"/>
+                  <text value="Playa del Carmen"/>
+                </properties>
+              </component>
+              <component id="c302" class="javax.swing.JRadioButton" binding="chapalaRadio">
+                <constraints>
+                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="186" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <foreground color="-1776412"/>
+                  <horizontalAlignment value="0"/>
+                  <text value="Chapala"/>
+                </properties>
+              </component>
+              <component id="1e39a" class="javax.swing.JRadioButton" binding="ecatepecRadio">
+                <constraints>
+                  <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="186" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <foreground color="-1776412"/>
+                  <horizontalAlignment value="0"/>
+                  <text value="Ecatepec"/>
+                </properties>
+              </component>
+              <component id="b2efc" class="javax.swing.JRadioButton" binding="cabosRadio">
+                <constraints>
+                  <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="186" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <foreground color="-1776412"/>
+                  <horizontalAlignment value="0"/>
+                  <text value="Los Cabos"/>
+                </properties>
+              </component>
+              <component id="fcdc7" class="javax.swing.JRadioButton" binding="zasdentroRadio">
+                <constraints>
+                  <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="186" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <foreground color="-1776412"/>
+                  <horizontalAlignment value="0"/>
+                  <text value="Lago Zasdentro"/>
+                </properties>
+              </component>
+              <component id="6c7b4" class="javax.swing.JLabel" binding="playaPriceLabel">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <foreground color="-6645094"/>
+                  <text value="$ 1 500"/>
+                </properties>
+              </component>
+              <component id="7b671" class="javax.swing.JLabel" binding="chapalaPriceLabel">
+                <constraints>
+                  <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <foreground color="-6645094"/>
+                  <text value="$ 500"/>
+                </properties>
+              </component>
+              <component id="931f8" class="javax.swing.JLabel" binding="ecatepecPriceLabel">
+                <constraints>
+                  <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <foreground color="-6645094"/>
+                  <text value="$ 50"/>
+                </properties>
+              </component>
+              <component id="f2db" class="javax.swing.JLabel" binding="cabosPriceLabel">
+                <constraints>
+                  <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <foreground color="-6645094"/>
+                  <text value="$ 1 000"/>
+                </properties>
+              </component>
+              <component id="dcd9d" class="javax.swing.JLabel" binding="zasdentroPriceLabel">
+                <constraints>
+                  <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <foreground color="-6645094"/>
+                  <text value="$ 3 500"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+        </children>
+      </grid>
+      <grid id="442c4" binding="daysPanel" layout-manager="GridLayoutManager" row-count="2" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="10" vgap="0">
+        <margin top="0" left="10" bottom="0" right="10"/>
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-14539723"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="e9a9b" class="javax.swing.JTextField" binding="daysTxt">
+            <constraints>
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-13683636"/>
+              <foreground color="-1776412"/>
+            </properties>
+          </component>
+          <component id="c931b" class="javax.swing.JLabel" binding="daysLabel">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-1776412"/>
+              <text value="Días"/>
+            </properties>
+          </component>
+          <grid id="5ae1f" binding="daysAlertPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="1" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <minimum-size width="-1" height="12"/>
+                <preferred-size width="-1" height="12"/>
+                <maximum-size width="-1" height="12"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-14539723"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="8fa93" class="javax.swing.JLabel" binding="daysAlertLabel">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="2" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font size="10"/>
+                  <foreground color="-39587"/>
+                  <horizontalAlignment value="0"/>
+                  <horizontalTextPosition value="0"/>
+                  <text value="Introduzca una cantidad de dias"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+        </children>
+      </grid>
+      <grid id="651d2" binding="paymentMethodPanel" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="0">
+        <margin top="0" left="10" bottom="0" right="10"/>
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-14539723"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <grid id="2ce89" binding="paymentMethodAlertPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <minimum-size width="-1" height="12"/>
+                <preferred-size width="-1" height="12"/>
+                <maximum-size width="-1" height="12"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-14539723"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="7b2d3" class="javax.swing.JLabel" binding="paymentMethodAlertLabel">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="2" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font size="10"/>
+                  <foreground color="-39587"/>
+                  <horizontalAlignment value="0"/>
+                  <horizontalTextPosition value="0"/>
+                  <text value="Seleccione un metodo de pago"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="f92ec" binding="paymentMethodInputPanel" layout-manager="GridLayoutManager" row-count="2" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="10">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-14539723"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="ab49b" class="javax.swing.JLabel" binding="paymentMethodLabel">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="2" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font size="16"/>
+                  <foreground color="-1776412"/>
+                  <text value="Tipo de pago"/>
+                </properties>
+              </component>
+              <component id="45980" class="javax.swing.JRadioButton" binding="onePaymentRadio">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="100" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <foreground color="-1776412"/>
+                  <horizontalAlignment value="0"/>
+                  <text value="Un pago"/>
+                </properties>
+              </component>
+              <component id="9db49" class="javax.swing.JRadioButton" binding="monthlyPaymentRadio">
+                <constraints>
+                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="100" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <foreground color="-1776412"/>
+                  <horizontalAlignment value="0"/>
+                  <text value="A 6 meses"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+        </children>
+      </grid>
+      <grid id="d95de" binding="quotationPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="0">
+        <margin top="0" left="10" bottom="0" right="10"/>
+        <constraints>
+          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-14539723"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <grid id="33d22" binding="quotationOutputPanel" layout-manager="GridLayoutManager" row-count="4" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="5">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-14539723"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="114e3" class="javax.swing.JLabel" binding="quotationLabel">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="2" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font size="16"/>
+                  <foreground color="-1776412"/>
+                  <text value="Cotizacion"/>
+                </properties>
+              </component>
+              <component id="bb227" class="javax.swing.JLabel" binding="subtotalLabel">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="5" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <foreground color="-1776412"/>
+                  <iconTextGap value="10"/>
+                  <text value="Subtotal: "/>
+                </properties>
+              </component>
+              <component id="d663b" class="javax.swing.JLabel" binding="ivaLabel">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="5" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <foreground color="-1776412"/>
+                  <text value="IVA: "/>
+                </properties>
+              </component>
+              <component id="db83a" class="javax.swing.JLabel" binding="totalLabel">
+                <constraints>
+                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="5" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <foreground color="-1776412"/>
+                  <text value="Total: "/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+        </children>
+      </grid>
+      <component id="441b4" class="javax.swing.JSeparator" binding="separator">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="1" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="-1" height="5"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+    </children>
+  </grid>
+  <buttonGroups>
+    <group name="profileKindRadio">
+      <member id="826b0"/>
+      <member id="123b9"/>
+    </group>
+  </buttonGroups>
+</form>
